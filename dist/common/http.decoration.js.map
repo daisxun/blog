@@ -1,0 +1,1 @@
+{"version":3,"file":"http.decoration.js","sourceRoot":"","sources":["../../src/common/http.decoration.ts"],"names":[],"mappings":";;;AAAA,2CAA2D;AAE3D,MAAa,eAAgB,SAAQ,sBAAa;IAChD,YAAY,OAAe,EAAE,OAAgB;QAC3C,KAAK,CACH,EAAE,OAAO,EAAE,OAAO,EAAE,IAAI,EAAE,OAAO,CAAC,CAAC,CAAC,OAAO,CAAC,CAAC,CAAC,mBAAU,CAAC,EAAE,EAAE,EAC7D,mBAAU,CAAC,EAAE,CACd,CAAC;IACJ,CAAC;CACF;AAPD,0CAOC"}
