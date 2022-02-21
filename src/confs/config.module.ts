@@ -8,11 +8,9 @@ import { ConfigService } from './config.service';
 import { LocalStrategy } from './strategy/local.strategy';
 import { JwtStrategy } from './strategy/jwt.strategy';
 const entityArr = [User, Article];
-import * as dotenv from 'dotenv';
-dotenv.config({ path: '.env' });
 
 const entity = TypeOrmModule.forFeature(entityArr);
-console.log('process.env=================', process.env);
+
 @Global()
 @Module({
   imports: [
@@ -24,11 +22,11 @@ console.log('process.env=================', process.env);
       useFactory() {
         return {
           type: 'mysql',
-          host: process.env.DATABASE_HOST,
-          port: Number(process.env.DATABASE_PORT),
-          username: process.env.DATABASE_USER,
-          password: process.env.DATABASE_PASSWORD,
-          database: process.env.DATABASE_NAME,
+          host: '120.76.137.199',
+          port: Number(3306),
+          username: 'root',
+          password: 'qazWSX!@#',
+          database: 'blog',
           entities: entityArr,
           synchronize: true,
           charset: 'utf8mb4',
@@ -50,3 +48,9 @@ console.log('process.env=================', process.env);
   exports: [entity, ConfigService, JwtModule],
 })
 export class ConfModule {}
+// AUTH_PWD_SALT=123456
+// DATABASE_HOST='120.76.137.199'
+// DATABASE_PORT=3306
+// DATABASE_NAME='blog'
+// DATABASE_USER='root'
+// DATABASE_PASSWORD='qazWSX!@#'
