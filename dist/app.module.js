@@ -13,6 +13,7 @@ const article_module_1 = require("./article/article.module");
 const config_module_1 = require("./confs/config.module");
 const dotenv = require("dotenv");
 dotenv.config({ path: '.env' });
+console.log('process.env=================', process.env);
 let AppModule = class AppModule {
 };
 AppModule = __decorate([

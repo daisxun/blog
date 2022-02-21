@@ -17,7 +17,10 @@ const config_service_1 = require("./config.service");
 const local_strategy_1 = require("./strategy/local.strategy");
 const jwt_strategy_1 = require("./strategy/jwt.strategy");
 const entityArr = [user_entity_1.User, article_entity_1.Article];
+const dotenv = require("dotenv");
+dotenv.config({ path: '.env' });
 const entity = typeorm_1.TypeOrmModule.forFeature(entityArr);
+console.log('process.env=================', process.env);
 let ConfModule = class ConfModule {
 };
 ConfModule = __decorate([

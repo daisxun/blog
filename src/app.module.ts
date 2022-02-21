@@ -5,6 +5,7 @@ import { ArticleModule } from './article/article.module';
 import { ConfModule } from './confs/config.module';
 import * as dotenv from 'dotenv';
 dotenv.config({ path: '.env' });
+console.log('process.env=================', process.env);
 @Module({
   imports: [UserModule, ArticleModule, ConfModule],
 })

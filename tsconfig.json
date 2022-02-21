@@ -21,21 +21,6 @@
     "strictBindCallApply": false, // 严格的 bind/call/apply 检查
     "forceConsistentCasingInFileNames": false, // 禁止对同一个文件的不一致的引用
     "noFallthroughCasesInSwitch": false,  // 报告switch语句的fallthrough错误
-    // 指定模块的路径，和baseUrl有关联，和webpack中resolve.alias配置一样
-    "paths": {  
-      "@libs/db": [
-        "libs/db/src"
-      ],
-      "@libs/db/*": [
-        "libs/db/src/*"
-      ],
-      "@common/common": [
-        "libs/common/src"
-      ],
-      "@common/common/*": [
-        "libs/common/src/*"
-      ]
-    }
   }, 
   // 指定一个排除列表（include的反向操作）
   "exclude": [

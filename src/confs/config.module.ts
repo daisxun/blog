@@ -8,9 +8,11 @@ import { ConfigService } from './config.service';
 import { LocalStrategy } from './strategy/local.strategy';
 import { JwtStrategy } from './strategy/jwt.strategy';
 const entityArr = [User, Article];
+import * as dotenv from 'dotenv';
+dotenv.config({ path: '.env' });
 
 const entity = TypeOrmModule.forFeature(entityArr);
-
+console.log('process.env=================', process.env);
 @Global()
 @Module({
   imports: [
