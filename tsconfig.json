@@ -1,0 +1,45 @@
+// 如果一个目录下存在一个tsconfig.json文件，那么它意味着这个目录是TypeScript项目的根目录。
+// tsconfig.json文件中指定了用来编译这个项目的根文件和编译选项
+
+// "include"和"exclude"属性指定一个文件glob匹配模式列表。
+{
+  "compilerOptions": {
+    "module": "commonjs", // 生成代码的模块标准
+    "declaration": true, // 生成相应的 .d.ts文件
+    "removeComments": true, // 删除所有注释
+    "emitDecoratorMetadata": true, // 给源码里的装饰器声明加上设计类型元数据
+    "experimentalDecorators": true, // 启用实验性的ES装饰器
+    "allowSyntheticDefaultImports": true, // 允许从没有设置默认导出的模块中默认导入
+    "target": "es2017", // 指定ECMAScript目标版本
+    "sourceMap": true, // 生成相应的 .map文件
+    "outDir": "./dist", // 重定向输出目录
+    "baseUrl": "./", // 解析非相对模块名的基准目录
+    "incremental": true, // 增置编译
+    "skipLibCheck": true, // 忽略所有的声明文件（ *.d.ts）的类型检查。
+    "strictNullChecks": false, // 在严格的 null检查模式下， null和 undefined值不包含在任何类型里，只允许用它们自己和 any来赋值
+    "noImplicitAny": false, // 在表达式和声明上有隐含的 any类型时报错
+    "strictBindCallApply": false, // 严格的 bind/call/apply 检查
+    "forceConsistentCasingInFileNames": false, // 禁止对同一个文件的不一致的引用
+    "noFallthroughCasesInSwitch": false,  // 报告switch语句的fallthrough错误
+    // 指定模块的路径，和baseUrl有关联，和webpack中resolve.alias配置一样
+    "paths": {  
+      "@libs/db": [
+        "libs/db/src"
+      ],
+      "@libs/db/*": [
+        "libs/db/src/*"
+      ],
+      "@common/common": [
+        "libs/common/src"
+      ],
+      "@common/common/*": [
+        "libs/common/src/*"
+      ]
+    }
+  }, 
+  // 指定一个排除列表（include的反向操作）
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
