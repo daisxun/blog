@@ -3,12 +3,16 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
 import { User } from './entity/user.entity';
 import { Article } from './entity/article.entity';
+import { Category } from './entity/category.entity';
+import { Comment } from './entity/comment.entity';
+import { Link } from './entity/link.entity';
+import { Tag } from './entity/tag.entity';
 import { JwtModule } from '@nestjs/jwt';
 import { ConfigService } from './config.service';
 import { LocalStrategy } from './strategy/local.strategy';
 import { JwtStrategy } from './strategy/jwt.strategy';
-const entityArr = [User, Article];
 
+const entityArr = [User, Article, Category, Comment, Link, Tag];
 const entity = TypeOrmModule.forFeature(entityArr);
 
 @Global()
